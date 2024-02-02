@@ -17,7 +17,7 @@
 - .o files compile for each .cpp and are INDEPENDENTLY referenced in statement from header files (-I)
 - use wildcard statement to include them all along with main.cpp
 - g++ -LC:/SFML-2.6.1/lib ./build/\*.o -o editor.exe -lsfml-graphics -lsfml-window -lsfml-system
-- finally link or SFML libs with -L, the object files folder via wildcard and the dynamica libraries of sfml -l to create exe
+- finally link our SFML libs with -L, the object files folder via wildcard and the dynamic libraries of sfml -l to create exe (this won't be exe on mac)
 
 ---
 
@@ -42,3 +42,17 @@
   }
 - universal -> \* ...selects everything
 - MDN lists ATTRIBUTES for elements (e.g. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)
+
+# Fitness App, Python and Flask 1 - 2_1_24
+
+- variables passed to index.html must be intiated in the def function scope of the render temp for that page
+- Flask/Jinja to HTML syntax:
+
+  @app.route("/")
+  def home_page():
+      exercises = exercises()
+      return render_template('index.html', exercises=exercises)
+
+      {% loop statement %}
+      <li> {{ variable }} </li>
+      {% endfor %}
