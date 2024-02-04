@@ -79,6 +79,7 @@ p[draggable="true"] {
       <li> {{ variable }} </li>
       {% endfor %}
 ```
+[rocketbook notes](./rocketbooks/Flask_jinja_2_1_24%20[Flask].pdf)
 
 # Blog App (Old Udemy) and Flask - 2_3_24
 
