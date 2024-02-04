@@ -19,40 +19,70 @@
 - g++ -LC:/SFML-2.6.1/lib ./build/\*.o -o editor.exe -lsfml-graphics -lsfml-window -lsfml-system
 - finally link our SFML libs with -L, the object files folder via wildcard and the dynamic libraries of sfml -l to create exe (this won't be exe on mac)
 
+[rocketbook notes](./rocketbooks/RB%202024-01-30%2019.36.47%20SFML_COMPILING.pdf)
+
 ---
 
 # CSS - 1_31_24
+ - __HTML URL Encoding__ - html urls cant have spaces, so they need to be encoded to handle those special characters. can be done [here](https://www.url-encode-decode.com/)
+- to create links in .md files, enclose target text in brackets and add link in parenthesis after
+- to open __MARKDOWN__ view in VSCode - ctrl + shift + V
+---
 
-- can add INTERNAL styling for a 1 page site in the <head> section of the index page
+- can add INTERNAL styling for a 1 page site in the __head__ section of the index page
+
 
 ## CSS Selectors
 
 - ELEMENT, CLASS, ID, ATTRIBUTE, UNIVERSAL
-- element -> h1 {
+### element
+``` 
+h1 {
   color: blue;  
-   }
-- class -> .red-text {
+}
+```
+### class
+```
+.red-text {
   color: blue;
-  }
-- id -> #main {
+}
+```
+### id
+```
+#main {
   color: red;
   }
-- attribute -> p[draggable="true"] {
+```
+### attribute
+```
+p[draggable="true"] {
   color: red;
   }
+```
 - universal -> \* ...selects everything
 - MDN lists ATTRIBUTES for elements (e.g. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)
+
+[rocketbook notes](./rocketbooks/RB%202024-01-31%2019.43.01%20css_selectors%20%5BCss%20selectors%5D.pdf)
 
 # Fitness App, Python and Flask 1 - 2_1_24
 
 - variables passed to index.html must be intiated in the def function scope of the render temp for that page
 - Flask/Jinja to HTML syntax:
-
+```
   @app.route("/")
   def home_page():
       exercises = exercises()
       return render_template('index.html', exercises=exercises)
 
+
       {% loop statement %}
       <li> {{ variable }} </li>
       {% endfor %}
+```
+
+# Blog App (Old Udemy) and Flask - 2_3_24
+
+### url_for()
+- used to generate URLs for routes, and returns the URL for the route
+      **url_for('name of route function', args)**
+- can be used in **href** elements
