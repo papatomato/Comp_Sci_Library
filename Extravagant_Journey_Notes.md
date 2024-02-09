@@ -87,3 +87,32 @@ p[draggable="true"] {
 - used to generate URLs for routes, and returns the URL for the route
       **url_for('name of route function', args)**
 - can be used in **href** elements
+---
+# CSS - 2_5_24
+```
+img {
+  height: 200px;
+  width: 200px;
+}
+```
+# Fitness App - 2_7_24
+
+### open() (PYTHON)
+- returns an TextIOWrapper file object
+- [more here](https://realpython.com/read-write-files-python/)
+```
+with open('dot_breeds.txt', 'r') as reader:
+    # Read and print the entire file
+    print(reader.read())
+```
+- the above code will open data as a __STRING__ 
+- to use JSON, we need to use __json.load()__
+- SHEETY was loading json data in with single quotes for keys -> had to convert the data as a string first use __json.loads__ to convert to json data
+```
+with open('file.json', 'r') as file:
+    json_string = file.read()    
+
+json_string = json_string.replace("'", '"')
+fitness_data = json.loads(json_string)
+```
+[rocketbook notes](rocketbooks%5CJSON_OPEN_2_8_24+%5BFile_READ_WRITE%5D.pdf)
