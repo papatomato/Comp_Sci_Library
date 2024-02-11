@@ -115,4 +115,24 @@ with open('file.json', 'r') as file:
 json_string = json_string.replace("'", '"')
 fitness_data = json.loads(json_string)
 ```
-[rocketbook notes](rocketbooks%5CJSON_OPEN_2_8_24+%5BFile_READ_WRITE%5D.pdf)
+[rocketbook notes](./rocketbooks%5CJSON_OPEN_2_8_24+%5BFile_READ_WRITE%5D.pdf)
+
+# EXP Feature and More Fitness App - 2_10_24
+
+- reading and writing to file
+```
+with open("myfile.txt", "r+") as data:
+```
+- we can open read and write with "r+", use "a" to append to the end of the file, and "w" will overwrite everything
+- use file.readlines() to read entire file into memory by line breaks that can be retrieved via index
+- use FOR LOOPS to iterate line by line through an opened file as well
+- used bootstrap cdn links to add bootstrap css styling to site
+
+# WallJUMP game transfer from Pycharm to VSCode
+- used builtin VSCode python interpreter options at bottom of window to create a venv and enable a local interpreter
+- used pip install pygame to add into venv
+- pygames got constants that need to have correct imports to access
+``` 
+from pygame.locals import * 
+```
+[rocketbook notes](./rocketbooks%5CExp+feature+2_10_24+%5BExp%5D.pdf)
