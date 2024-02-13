@@ -115,7 +115,7 @@ with open('file.json', 'r') as file:
 json_string = json_string.replace("'", '"')
 fitness_data = json.loads(json_string)
 ```
-[rocketbook notes](./rocketbooks%5CJSON_OPEN_2_8_24+%5BFile_READ_WRITE%5D.pdf)
+[rocketbook notes](./rocketbooks/JSON_OPEN_2_8_24%20[File_READ_WRITE].pdf)
 
 # EXP Feature and More Fitness App - 2_10_24
 
@@ -135,4 +135,20 @@ with open("myfile.txt", "r+") as data:
 ``` 
 from pygame.locals import * 
 ```
-[rocketbook notes](./rocketbooks%5CExp+feature+2_10_24+%5BExp%5D.pdf)
+
+# Python Datetime - 2_12_2024
+```datetime.strptime ('date string here', '%m/%d/%y')```
+- the above converts a date-looking string to a datetime object
+- use %Y if the year is four-digit
+- strftime will convert a datetime object to string
+- subtracting two datetime objects yields a deltatime object
+- use an exception function to detect if a value is convertable to a datetime object first
+```
+def is_valid_datetime(strdate):
+  try:
+    convert_to_datetime(strdata)
+    return True
+  except ValueError:
+    return False
+```
+[rocketbook notes](rocketbooks/RB%202024-02-12%2020.02.58%20[Datetime].pdf)
